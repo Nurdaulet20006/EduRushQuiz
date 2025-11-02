@@ -3,26 +3,16 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import {
-  BookOpen,
+  Calculator,
+  Atom,
   Code,
-  Database,
-  Coffee,
-  Cpu,
+  Dna,
+  FlaskConical,
   Globe,
-  Layout,
-  ChevronRight,
-  ChevronDown,
-  CheckCircle,
-  XCircle,
-  Award,
-  Terminal,
-  Star,
-  Trophy,
-  Sparkles,
-  Zap,
-  Target,
-  Menu,
-  X,
+  BookOpen,
+  Languages,
+  Scale,
+  BrainCircuit,
 } from "lucide-react";
 
 import questionsData from "../Sidebar/dummydata";
@@ -67,13 +57,13 @@ const Sidebar = () => {
     {
       id: "math",
       name: "Mathematic",
-      icon: <Globe size={20} />,
+      icon: <Calculator size={20} />,
       color: "bg-orange-50 text-orange-600 border-orange-200",
     },
     {
       id: "physics",
       name: "Physics",
-      icon: <Layout size={20} />,
+      icon: <Atom size={20} />,
       color: "bg-blue-50 text-blue-600 border-blue-200",
     },
     {
@@ -85,43 +75,43 @@ const Sidebar = () => {
     {
       id: "bio",
       name: "Biology",
-      icon: <Cpu size={20} />,
+      icon: <Dna size={20} />,
       color: "bg-cyan-50 text-cyan-600 border-cyan-200",
     },
     {
       id: "chemistry",
       name: "Chemistry",
-      icon: <Code size={20} />,
+      icon: <FlaskConical size={20} />,
       color: "bg-green-50 text-green-600 border-green-200",
     },
     {
       id: "geo",
       name: "Geography",
-      icon: <Database size={20} />,
+      icon: <Globe size={20} />,
       color: "bg-emerald-50 text-emerald-600 border-emerald-200",
     },
     {
       id: "history",
       name: "History",
-      icon: <Coffee size={20} />,
+      icon: <BookOpen size={20} />,
       color: "bg-red-50 text-red-600 border-red-200",
     },
     {
       id: "english",
       name: "English",
-      icon: <Terminal size={20} />,
+      icon: <Languages size={20} />,
       color: "bg-indigo-50 text-indigo-600 border-indigo-200",
     },
     {
       id: "basicoflow",
       name: "Basic of Low",
-      icon: <Code size={20} />,
+      icon: <Scale size={20} />,
       color: "bg-purple-50 text-purple-600 border-purple-200",
     },
     {
       id: "fundamentalofmath",
       name: "Fundamental of Math",
-      icon: <Layout size={20} />,
+      icon: <BrainCircuit size={20} />,
       color: "bg-pink-50 text-pink-600 border-pink-200",
     },
   ];
