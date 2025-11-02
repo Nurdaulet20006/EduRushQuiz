@@ -3,7 +3,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import {
-  Calculator,
+   Calculator,
   Atom,
   Code,
   Dna,
@@ -13,6 +13,23 @@ import {
   Languages,
   Scale,
   BrainCircuit,
+  Database,
+  Coffee,
+  Cpu,
+  Layout,
+  ChevronRight,
+  ChevronDown,
+  CheckCircle,
+  XCircle,
+  Award,
+  Terminal,
+  Star,
+  Trophy,
+  Sparkles,
+  Zap,
+  Target,
+  Menu,
+  X,
 } from "lucide-react";
 
 import questionsData from "../Sidebar/dummydata";
