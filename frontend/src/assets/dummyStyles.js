@@ -24,7 +24,7 @@ export const navbarStyles = {
   // Title section
   titleContainer: "flex-1 flex justify-center px-3",
   titleBackground: "bg-gradient-to-r from-blue-600/25 via-purple-600/25 to-indigo-600/25 xl:ml-40 backdrop-blur-sm px-4 py-2 sm:px-6 sm:py-3 rounded-full border border-white/10 shadow-md max-w-full",
-  titleText: "text-sm sm:text-base md:text-lg lg:text-2xl font-bold font-[pacifico] text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 text-center truncate",
+  titleText: "text-sm sm:text-base md:text-lg lg:text-2xl font-semibold font-sans text-white drop-shadow-[0_1px_2px_rgba(255,255,255,0.3)] hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)] transition duration-300 text-center truncate",
   
   // Desktop buttons
   desktopButtonsContainer: "hidden md:flex items-center cursor-pointer flex-shrink-0 space-x-3",
@@ -215,7 +215,7 @@ export const sidebarStyles = {
   headerContent: "flex font-[pacifico] items-center justify-between relative z-10",
   logoContainer: "flex items-center space-x-3",
   logoIcon: "p-2 bg-white/40 rounded-xl backdrop-blur-sm border border-white",
-  logoTitle: "text-2xl font-bold",
+  logoTitle: "text-2xl font-bold font-sans text-black tracking-wide drop-shadow-[0_1px_1px_rgba(0,0,0,0.15)]",
   logoSubtitle: "mt-1 text-slate-600 text-sm",
   closeButton: "md:hidden p-2 rounded-md hover:bg-white/50",
   
