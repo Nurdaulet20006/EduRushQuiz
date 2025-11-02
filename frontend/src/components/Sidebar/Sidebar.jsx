@@ -65,62 +65,62 @@ const Sidebar = () => {
 
   const technologies = [
     {
-      id: "html",
-      name: "Math",
+      id: "math",
+      name: "Mathematic",
       icon: <Globe size={20} />,
       color: "bg-orange-50 text-orange-600 border-orange-200",
     },
     {
-      id: "css",
-      name: "Physic",
+      id: "physics",
+      name: "Physics",
       icon: <Layout size={20} />,
       color: "bg-blue-50 text-blue-600 border-blue-200",
     },
     {
-      id: "js",
-      name: "JavaScript",
+      id: "info",
+      name: "Informatics",
       icon: <Code size={20} />,
       color: "bg-yellow-50 text-yellow-600 border-yellow-200",
     },
     {
-      id: "react",
-      name: "React",
+      id: "bio",
+      name: "Biology",
       icon: <Cpu size={20} />,
       color: "bg-cyan-50 text-cyan-600 border-cyan-200",
     },
     {
-      id: "node",
-      name: "Node.js",
+      id: "chemistry",
+      name: "Chemistry",
       icon: <Code size={20} />,
       color: "bg-green-50 text-green-600 border-green-200",
     },
     {
-      id: "mongodb",
-      name: "MongoDB",
+      id: "geo",
+      name: "Geography",
       icon: <Database size={20} />,
       color: "bg-emerald-50 text-emerald-600 border-emerald-200",
     },
     {
-      id: "java",
-      name: "Java",
+      id: "history",
+      name: "History",
       icon: <Coffee size={20} />,
       color: "bg-red-50 text-red-600 border-red-200",
     },
     {
-      id: "python",
-      name: "Python",
+      id: "english",
+      name: "English",
       icon: <Terminal size={20} />,
       color: "bg-indigo-50 text-indigo-600 border-indigo-200",
     },
     {
-      id: "cpp",
-      name: "C++",
+      id: "basicoflow",
+      name: "Basic of Low",
       icon: <Code size={20} />,
       color: "bg-purple-50 text-purple-600 border-purple-200",
     },
     {
-      id: "bootstrap",
-      name: "Bootstrap",
+      id: "fundamentalofmath",
+      name: "Fundamental of Math",
       icon: <Layout size={20} />,
       color: "bg-pink-50 text-pink-600 border-pink-200",
     },
@@ -362,7 +362,7 @@ const Sidebar = () => {
 
           <div className={sidebarStyles.sidebarContent}>
             <div className={sidebarStyles.technologiesHeader}>
-              <h2 className={sidebarStyles.technologiesTitle}>Technologies</h2>
+              <h2 className={sidebarStyles.technologiesTitle}>Subjects</h2>
               <span className={sidebarStyles.technologiesCount}>
                 {technologies.length} options
               </span>
@@ -513,12 +513,10 @@ const Sidebar = () => {
                   <Award size={64} className="text-indigo-700" />
                 </div>
                 <h2 className={sidebarStyles.welcomeTitle}>
-                  Welcome to Tech Quiz Master
+                  Welcome to our Platform
                 </h2>
                 <p className={sidebarStyles.welcomeDescription}>
-                  Select a technology from the sidebar to start your quiz
-                  journey. Test your knowledge at basic, intermediate, or
-                  advanced levels.
+                  Improve your knowledge by taking quizzes, revising materials, and competing with friends
                 </p>
 
                 <div className={sidebarStyles.featuresGrid}>
@@ -527,10 +525,10 @@ const Sidebar = () => {
                       <Star size={20} />
                     </div>
                     <h3 className={sidebarStyles.featureTitle}>
-                      Multiple Technologies
+                      Multiple Subjects
                     </h3>
                     <p className={sidebarStyles.featureDescription}>
-                      HTML, CSS, JavaScript, React, and more
+                      Math, Physics, Info, Bio and more
                     </p>
                   </div>
 
@@ -562,7 +560,7 @@ const Sidebar = () => {
                 <div className={sidebarStyles.welcomePrompt}>
                   <p className={sidebarStyles.welcomePromptText}>
                     <Sparkles size={16} className="mr-2" />
-                    Select any technology to begin your learning adventure!
+                    Select any Subject to begin your learning adventure!
                   </p>
                 </div>
               </div>
