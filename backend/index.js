@@ -1,17 +1,16 @@
-
 import 'dotenv/config';
-
 import express from 'express';
 import cors from 'cors';
+
 import { connectDB } from './config/db.js';
 import userRouter from './routes/userRoutes.js';
-import resultRouter from './routes/resultRoutes.js';
+import resultRoutes from './routes/resultRoutes.js';  // ✔ дұрыс импорт
 
 const app = express();
 const port = 8080;
 
 // Middleware
-app.use(cors())
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -20,11 +19,11 @@ connectDB();
 
 // Routes
 app.use("/api/auth", userRouter);
-app.use("/api/results", resultRouter);
+app.use("/api/results", resultRoutes);   // ✔ дұрыс қолдану — біреу ғана
 
 app.get('/', (req, res) => {
     console.log("ROOT ROUTE TRIGGERED");
-    res.send('API Working');
+    res.send('API Working ✔');
 });
 
 app.listen(port, () => {
