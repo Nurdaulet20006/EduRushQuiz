@@ -9,7 +9,14 @@ export async function createResult(req, res) {
 
     const { title, technology, level, totalQuestions, correct, wrong } = req.body;
 
-    // basic validation for required fields needed for create or update
+    // basic validation for required fields
+    if (!title || !title.trim()) {
+      return res.status(400).json({
+        success: false,
+        message: "Title is required"
+      });
+    }
+
     if (!technology || !level || totalQuestions === undefined || correct === undefined) {
       return res.status(400).json({
         success: false,
@@ -20,15 +27,6 @@ export async function createResult(req, res) {
     // compute wrong if not provided
     const computedWrong = wrong !== undefined ? Number(wrong) : Math.max(0, Number(totalQuestions) - Number(correct));
 
-    // No existing -> create new document
-    if (!title) {
-      // require title when creating a new result
-      return res.status(400).json({
-        success: false,
-        message: "Missing required field for creation: title"
-      });
-    }
-
     const payload = {
       title: String(title).trim(),
       technology,
@@ -36,15 +34,20 @@ export async function createResult(req, res) {
       totalQuestions: Number(totalQuestions),
       correct: Number(correct),
       wrong: computedWrong,
-      user: req.user.id
+      user: new mongoose.Types.ObjectId(req.user.id) // Convert to ObjectId
     };
 
-    const created = await Result.create(payload);
-    return res.status(201).json({ success: true, message: "Result created", result: created });
+    console.log("Creating result with payload:", payload); // Debug log
 
+    const created = await Result.create(payload);
+    
+    console.log("Result created successfully:", created); // Debug log
+
+    return res.status(201).json({ success: true, message: "Result created", result: created });
   } catch (err) {
     console.error("createResult error:", err);
-    return res.status(500).json({ success: false, message: "Server error" });
+    console.error("Error details:", err.message); // More detailed error
+    return res.status(500).json({ success: false, message: "Server error: " + err.message });
   }
 }
 
