@@ -25,7 +25,7 @@ export default function SignUpPage({ onSignupSuccess = null }) {
   const [submitError, setSubmitError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const API_BASE = import.meta.env.VITE_API_URL;
+  const API_BASE = "http://localhost:5000";
 
   const validate = () => {
     const e = {};
