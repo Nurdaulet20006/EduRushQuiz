@@ -5,6 +5,9 @@ import { loginStyles } from "../../assets/dummyStyles";
 
 const isValidEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
+
+const data = await resp.json();
+console.log(data);
 export default function LoginPage({ onLoginSuccess = null }) {
   const navigate = useNavigate();
 
@@ -15,7 +18,7 @@ export default function LoginPage({ onLoginSuccess = null }) {
   const [loading, setLoading] = useState(false);
   const [submitError, setSubmitError] = useState("");
 
-  const API_BASE = "https://quiz-app-backend-pqea.onrender.com";
+  const API_BASE = import.meta.env.VITE_API_URL;
 
   const validate = () => {
     const e = {};
@@ -46,7 +49,7 @@ export default function LoginPage({ onLoginSuccess = null }) {
       try {
         data = await resp.json();
       } catch (e) {
-        /* ignore parse errors */
+        console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
       }
 
       if (!resp.ok) {
