@@ -35,7 +35,7 @@ import {
 import questionsData from "../Sidebar/dummydata";
 import { sidebarStyles } from "../../assets/dummyStyles";
 
-const API_BASE = "http://localhost:5000";
+const API_BASE = "http://localhost:8080";
 
 const Sidebar = () => {
   const [selectedTech, setSelectedTech] = useState(null);

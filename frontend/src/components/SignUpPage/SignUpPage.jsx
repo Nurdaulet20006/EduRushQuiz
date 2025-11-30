@@ -25,7 +25,7 @@ export default function SignUpPage({ onSignupSuccess = null }) {
   const [submitError, setSubmitError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const API_BASE = "https://quiz-app-backend-pqea.onrender.com";
+  const API_BASE = "http://localhost:8080";
 
   const validate = () => {
     const e = {};
